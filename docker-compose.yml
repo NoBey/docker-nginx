@@ -1,0 +1,12 @@
+version: "3"
+services:
+
+  nonginx:
+    image: nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - "./log:/log"
+      - "./www:/www"
+      - "./conf:/conf"
+      - "./nginx.conf:/etc/nginx/nginx.conf"
