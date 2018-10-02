@@ -1,6 +1,5 @@
 version: "3"
 services:
-
   nonginx:
     image: nginx
     ports:
@@ -8,5 +7,4 @@ services:
     volumes:
       - "./log:/log"
       - "./www:/www"
-      - "./conf:/conf"
-      - "./nginx.conf:/etc/nginx/nginx.conf"
+      - "./conf:/etc/nginx/conf.d"

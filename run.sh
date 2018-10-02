@@ -1,1 +1,1 @@
-docker run --name mynginx -d -p 1212:80  -v $PWD/log:/log -v $PWD/www:/www -v $PWD/conf:/conf -v $PWD/nginx.conf:/etc/nginx/nginx.conf -d nginx
+docker run -p 1212:80 -v $PWD/conf:/etc/nginx/conf.d -v $PWD/www:/www -v $PWD/log:/log -d nginx
