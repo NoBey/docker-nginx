@@ -9,9 +9,9 @@ services:
       - "./www:/www"
       - "./conf:/etc/nginx/conf.d"
     networks:
-      - noNet
+      - nginx
 
 networks:
-  noNet:
+  nginx:
     driver: bridge
     
