@@ -8,3 +8,10 @@ services:
       - "./log:/log"
       - "./www:/www"
       - "./conf:/etc/nginx/conf.d"
+    networks:
+      - noNet
+
+networks:
+  noNet:
+    driver: bridge
+    
