@@ -3,15 +3,17 @@ services:
   nonginx:
     image: nginx
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
       - "./log:/log"
       - "./www:/www"
       - "./conf:/etc/nginx/conf.d"
     networks:
-      - nginx
+      - noNet
 
 networks:
-  nginx:
-    driver: bridge
+  noNet:
+    external:
+      name: noNet
+
     
